@@ -1,0 +1,139 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <title>Luento 2</title>
+</head>
+<body>
+<h3>Laskureita maailman ääriin asti </h3>
+
+<p>
+    <br>
+    Nämä ohjelmat tulostavat näytölle tekstiä:
+    <br>
+</p>
+
+<script>
+  'use strict';
+
+  //Tehtävä 1
+  let mitta, alamitta = 37, puuttuva;
+  mitta = prompt("Anna kuhan pyyntimitta senttimetreinä: ");
+  if (mitta < alamitta) {
+    puuttuva = alamitta - mitta;
+    document.write("Minimipyyntimitasta puuttuu " + puuttuva + " senttimetriä. <br>");
+  }
+
+  //Tehtävä 2
+  let nimi, numero;
+
+  nimi =  prompt("Mikä on nimesi?");
+  numero = (Math.random() * (4 - 1) +1).toFixed();
+
+  if (numero == 1){
+    document.write(nimi + " olet Rohkelikko!");
+  }
+
+  else if (numero == 2){
+    document.write(nimi + " olet Korpinkynsi!");
+  }
+
+  else if (numero == 3){
+    document.write(nimi + " olet Puuskupuh!");
+  }
+
+  else{
+    document.write(nimi + " olet Luihuinen!");
+  }
+
+  //Tehtävä 3
+ let sukupuoli, hemoarvo;
+
+  sukupuoli = prompt("Mikä on sukupuolesi?");
+  hemoarvo = prompt("Mitkä ovat hemoglobiiniarvosi?");
+
+  if(sukupuoli == 'mies'){
+    if(hemoarvo >= 134 && hemoarvo <= 195 ){
+      document.write("<br>Hemoglobiiniarvosi ovat normaalit.");
+    }
+    else if(hemoarvo <= 134  ){
+      document.write("<br>Hemoglobiiniarvosi on matala.");
+    }
+    else{
+      document.write("<br>Hemoglobiiniarvosi on korkea.");
+    }
+  }
+
+  else if(sukupuoli == 'nainen'){
+    if(hemoarvo >= 117 && hemoarvo <= 175 ){
+      document.write("<br>Hemoglobiiniarvosi ovat normaalit.");
+    }
+    else if(hemoarvo <= 117  ){
+      document.write("<br>Hemoglobiiniarvosi on matala.");
+    }
+    else{
+      document.write("<br>Hemoglobiiniarvosi on korkea.");
+    }
+  }
+
+  //Tehtävä 4
+  let lompakko, lippu;
+
+  lompakko = prompt("Kuinka paljon lompakossasi on rahaa?");
+  lippu = prompt("Kuinka paljon lippu maksaa?");
+  if (lompakko >= lippu){
+    lompakko = lompakko - lippu;
+    document.write("<br>Tässä lippusi, tervetuloa kyytiin.");
+  }
+  else{
+    document.write("<br>Ei tarpeeksi rahaa.");
+  }
+
+  document.write("<br>Lompakossasi on " + lompakko + " € jäljellä.");
+
+  //Tehtävä 5
+  let jokotai, luku, neliojuuri
+
+  jokotai = window.confirm("Haluatko laskea neliöjuuren?");
+  if(jokotai == true) {
+    luku = prompt('Anna luku ');
+    if (luku >= 0) {
+      neliojuuri = Math.sqrt(luku);
+      document.write("<br>Luvun neliöjuuri on " + neliojuuri + ".");
+    }
+    else{
+      document.write("Negatiivisen luvun neliöjuurta ei ole määritelty.");
+    }
+  }
+  else{
+    document.write("<br>Neliöjuurta ei laskettu.");
+  }
+
+
+  //Tehtävä 6
+  let vuosi;
+
+  vuosi = prompt("Anna vuosiluku:");
+
+  if(vuosi % 4 != 0){
+    document.write("<br>Vuosi on karkausvuosi.");
+  }
+
+  else if(vuosi % 400 == 0) {
+    document.write("<br>Vuosi on  karkausvuosi.");
+  }
+
+  else if(vuosi % 100 == 0){
+    document.write("<br>Vuosi ei ole karkausvuosi.");
+  }
+
+  else{
+    document.write("<br>Vuosi on karkausvuosi.");
+  }
+
+
+
+
+</script>
+
+
+</body>
+</html>
