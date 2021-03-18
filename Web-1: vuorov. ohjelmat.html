@@ -1,0 +1,99 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <title>Luento 1</title>
+</head>
+<body>
+<h3>Tervehdys, - ja monenlaisien laskujen laskijaohjelma </h3>
+
+<p>
+    <br>
+    Tämä ohjelma tulostaa näytölle tekstiä:
+    <br>
+</p>
+
+<script>
+  'use strict';
+
+  //Tehtävä 1
+  document.write("Tämä on JavaScript-ohjelma!");
+
+  //Tehtävä 2
+  let nimi;
+  nimi = prompt("Anna nimesi:");
+  document.write("<br>Hyvää aamupäivää,  " + nimi);
+
+  //Tehtävä 3
+  let sade;
+  sade = prompt("Ilmoita ympyrän säde metreissä: ");
+  let pintaala = Math.PI * (sade*sade);
+  //pyöristetty kahden viimeisen merkitsevän desimaalin mukaan
+  document.write ("<br>Ympyrän säde on " + pintaala.toFixed(2) + " m2");
+
+  //Tehtävä 4
+  let kanta, korkeus;
+  kanta = prompt("Ilmoita suorakulmion kanta metreissä: ");
+  korkeus = prompt("Ilmoita suorakulmion korkeus metreissä")
+  let pintaala2 = kanta * korkeus;
+  let piiri = (kanta * 2) + (korkeus *2)
+  //pyöristetty kahden viimeisen merkitsevän desimaalin mukaan
+  document.write ("<br>Suorakulmion pinta ala on " + pintaala2.toFixed(2) + " m2");
+  document.write ("<br>Suorakulmion piiri on " + piiri.toFixed(2) + " m");
+
+  //Tehtävä 5
+  let luku1, luku2, luku3, summa, tulo, keskiarvo
+  luku1 = prompt("Anna ensimmäinen kokonaisluku");
+  luku2 = prompt("Anna toinen kokonaisluku");
+  luku3 = prompt("Anna kolmas kokonaisluku");
+  summa = (+luku1)+ (+luku2) + (+luku3);
+  tulo = (luku1*luku2*luku3);
+  keskiarvo = (summa / 3);
+  document.write ("<br>Lukujen summa on " + summa);
+  document.write ("<br>Lukujen tulo on " + tulo);
+  //pyöristetty kahden viimeisen merkitsevän desimaalin mukaan
+  document.write ("<br>Lukujen keskiarvo on " + keskiarvo.toFixed(2));
+
+  //Tehtävä 6
+  let leiviska, naula, luoti, kilo, gramma, kokogramma;
+  leiviska = + prompt("Anna leiviskät:");
+  naula = + prompt("Anna naulat:");
+  luoti = + prompt("Anna luodit:");
+  kokogramma = (luoti *13.3 ) + (naula * 425.6) + (leiviska * 8512);
+  kilo = Math.floor(kokogramma/1000);
+  gramma = Math.ceil((kokogramma) - kilo *1000);
+
+  document.write(" <br>Massa nykymittojen mukaan: " + "<br>" + kilo + " kilogrammaa " + "ja " + gramma + " grammaa."   );
+
+  //Tehtävä 7
+  let saldo, korko, vuosikorko, loppusaldo;
+  saldo = + prompt("Anna tilin saldo:");
+  korko = + prompt("Anna korko prosentteina:");
+  vuosikorko = saldo * (korko / 100);
+  loppusaldo = saldo + vuosikorko ;
+  //pyöristetty kahden viimeisen merkitsevän desimaalin mukaan
+  document.write("<br>Kasvanut saldo on " + loppusaldo.toFixed(2) + " euroa ja korko on " + vuosikorko.toFixed(2) + " euroa " );
+
+
+  //Tehtävä 8
+  let noppa1, noppa2, noppasumma;
+  noppa1 = Math.random() * (6 - 1) +1;
+  noppa2 = Math.random() * (6 - 1) +1;
+  noppasumma = noppa1 + noppa2;
+  document.write("<br>Ensimmäisen nopan heitto oli " + noppa1.toFixed(0) + "<br>toisen nopan heitto oli " + noppa2.toFixed(0) + "<br>lukujen summa on " + noppasumma.toFixed(0) );
+
+
+  //Tehtävä 9
+  let numero1, numero2, numero3, numero4, numero5, numero6, numero7;
+  numero1 = Math.random() * 9;
+  numero2 = Math.random() * 9;
+  numero3 = Math.random() * 9;
+  numero4 = Math.random() * (6 - 1) +1;
+  numero5 = Math.random() * (6 - 1) +1;
+  numero6 = Math.random() * (6 - 1) +1;
+  numero7 = Math.random() * (6 - 1) +1;
+  document.write(" <br>kolminumeroinen koodi: " + numero1.toFixed() + numero2.toFixed() + numero3.toFixed() + "<br>nelinumeroinen koodi: " + numero4.toFixed() + numero5.toFixed() + numero6.toFixed() + numero7.toFixed());
+
+
+</script>
+
+
+</body>
