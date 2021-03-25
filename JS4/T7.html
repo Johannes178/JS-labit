@@ -1,0 +1,60 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <title>Week 2</title>
+</head>
+<body>
+<h3> Dictatorial election </h3>
+
+<p>
+    <br>
+    This is a program that asks the user for the number of candidates, then asks the user to vote, and declares the winner.
+    <br>
+</p>
+
+<script>
+  "use strict";
+
+  let candidate, integer, list = [], result;
+  let n = 1;
+  let number = 0;
+  let vote = 0;
+
+  candidate = prompt("Enter the amount of candidates");
+
+  do{
+    list.push(n);
+    n++
+
+  }while( n <=candidate);
+
+  document.write("List of candidates by voting number " + list);
+  n = 1;
+  do{
+    integer =  prompt("Which candidate do you want to vote for?");
+    if(integer != 0) {
+      list.push(integer);
+    }
+    n++;
+  }while(n <= candidate);
+  n = 0;
+  list.sort(function(a, b){return a-b});
+  while(n < list.length){
+    if(list[n]===list[n+1]){
+      vote++;
+    }
+    else {
+      vote=0;
+    }
+    if(vote>number){
+      result = list[n];
+      number = vote;
+    }
+    n++;
+  }
+  document.write('<br>'  + "Candidate number " + result + " wins!");
+
+</script>
+
+
+</body>
+</html>

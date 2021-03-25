@@ -1,0 +1,40 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <title>Week 2</title>
+</head>
+<body>
+<h3> Dog name program for Australians </h3>
+
+<p>
+    <br>
+    This program prints six dog names in reverse alphabetical order.
+    <br>
+</p>
+
+<script>
+  "use strict";
+
+  let dog,list=[];
+
+  let n = 1;
+
+
+  while(n<=6){
+    dog = prompt("Enter six dog names");
+    list [n] = dog;
+    n ++;
+  }
+
+  list.sort();
+  n = 6;
+
+  while(n>0) {
+    n--;
+    document.write('<ul>' + '<li>' + list[n] + '</li>' + '</ul>');
+  }
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <title>Week 2</title>
+</head>
+<body>
+<h3> Attendee list program </h3>
+
+<p>
+    <br>
+    This program counts the names from the user prompt and prints them in a numbered list in order of entering.
+    <br>
+</p>
+
+<script>
+  "use strict";
+
+  let list = [], name, amount;
+  let n= 0;
+
+  list.push('<ol>');
+  amount = prompt("Enter the amount of names");
+
+  while(n < amount){
+    name = prompt("Enter a name");
+    list.push('<li>' + name + '</li>');
+    n++;
+  }
+
+  list.push('</ol>');
+  document.write(list.join(' '));
+
+</script>
+
+
+</body>
+</html>

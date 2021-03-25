@@ -1,0 +1,35 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <title>Week 2</title>
+</head>
+<body>
+<h3> Big, small, don't matter </h3>
+
+<p>
+    <br>
+    This program asks the user for numbers until they give a zero. After that, the numbers given are then printed from largest to smallest.
+    <br>
+</p>
+
+<script>
+  "use strict";
+
+  let integer, list =[];
+
+  do{
+    integer =prompt("Enter an integer (The program continues to count until you enter a 0).");
+    if(integer !=0) {
+      list.push(integer);
+    }
+
+  }while(integer != 0);
+
+  list.sort(function(a, b){return a-b});
+  list.reverse();
+  document.write(list);
+
+</script>
+
+
+</body>
+</html>

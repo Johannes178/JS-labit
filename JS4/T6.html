@@ -1,0 +1,48 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <title>Week 2</title>
+</head>
+<body>
+<h3> No refills part 2 </h3>
+
+<p>
+    <br>
+    This is a program that asks the user for numbers until they enter a 0, and calculates those numbers entered and gives out a median of the numbers entered.
+    <br>
+</p>
+
+<script>
+  "use strict";
+
+  let integer, i, n;
+  let list = [];
+
+  do{
+    integer =  prompt("Enter a number");
+    if(integer != 0) {
+      list.push(integer);
+    }
+  }while(integer!=0);
+
+  list.sort(function(a, b){return a-b});
+  document.write(list + '<br>');
+  document.write((" Amount of numbers entered: " + list.length + '<br>' ));
+
+  if(list.length %2 != 0){
+    i = + Math.floor((list.length)/2);
+    document.write("Median = " + list[i]);
+  }
+
+  else{
+    document.write( "Odd number " );
+    i =Math.floor((list.length)/2);
+    n =Math.floor((list.length)/2 + 1);
+    document.write((i + n) / 2);
+    document.write( "Odd number " );
+  }
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <title>Week 2</title>
+</head>
+<body>
+<h3> No refills </h3>
+
+<p>
+    <br>
+    This is a program that asks the user for numbers until they re-enter a number they have previously entered into the prompt.
+    <br>
+</p>
+
+<script>
+  "use strict";
+
+  let integer, integer2, list= [];
+
+  do{
+    integer =  prompt("Enter a number");
+    integer2 = list.includes(integer);
+    if(integer2 != true) {
+      list.push(integer);
+    }
+  }while(integer2 != true);
+  document.write("You already entered number" + integer);
+
+</script>
+
+
+</body>
+</html>
