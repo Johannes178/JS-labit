@@ -3,42 +3,45 @@
     <title>Luento 2</title>
 </head>
 <body>
-<h3>Laskureita maailman ääriin asti </h3>
+<h3> Probability program </h3>
 
 <p>
     <br>
-    Tämä ohjelma tulostaa näytölle tekstiä
+    This particular program simulates the probability of the sum of dices actually appearing
     <br>
 </p>
 
 <script>
-  'use strict';
+  "use strict";
 
+//Tehtävä 6
+  let dice, eyecount, list=[], sum1, i= 1, a = 0, c = 1, probability, sum2;
 
-  //Tehtävä 1
-  let luku, i;
-  luku = prompt('Anna yläraja parillisille luvuille.');
-  for (i = luku - 1; i>0 ; i--) {
-    if(i == luku -1){
-      document.write('Annetut luvut: ' + luku)
+  dice = + prompt("Enter the amount of dices:");
+  sum1 = + prompt("Enter the sum of the dice's rolls:");
+
+  document.write("The amount of entered dices is " + dice + ", and the sum of the entered amount of dices is " + sum1);
+
+  do{
+    while(i<=dice){
+      eyecount=  Math.random() * (6 - 1) +1;
+      list.push( + eyecount.toFixed());
+      i ++;
     }
-    luku = luku * i;
-    document.write(i);
-  }
-  document.write('<br>' + 'Kertoma =' + luku);
+    sum2 = + list.reduce((a, b) => a +b , 0);
 
-  //Tehtävä 2
-  let luku;
+    if(sum2 == sum1){
+      a++;
+    }
+    i = i - dice;
+    c ++;
 
-  luku = + prompt('Anna positiivinen luku');
-  while(luku < 0){
-    luku = + prompt('Tämä ei ole positiivinen luku. Anna positiivinen luku');
-  }
-  luku = Math.sqrt(luku);
-  document.write('Luvun neliöjuuri on = ' + luku );
+    list = [];
+  }while(c <=1000);
 
-  //Tehtävä 3
-
+  document.write("<br>The simulation perfomed 1000 scenarios, and the entered sum appeared " + a + " times");
+  probability = a / 1000 * 100;
+  document.write('<br>'+ "The probability for that particular sum to actually appear is " + probability.toFixed(1) + '%');
 
 </script>
 

@@ -3,26 +3,26 @@
     <title>Luento 2</title>
 </head>
 <body>
-<h3>Laskureita maailman ääriin asti </h3>
+<h3> Square root counter </h3>
 
 <p>
     <br>
-    Nämä ohjelmat tulostavat näytölle tekstiä:
+    This program counts the square root of the number entered. If you enter a negative number, the prompt gives you advice what to do.
     <br>
 </p>
 
 <script>
-  'use strict';
+  "use strict";
 
   //Tehtävä 2
-  let luku;
+  let integer;
 
-  luku = + prompt('Anna positiivinen luku');
-  while(luku < 0){
-    luku = + prompt('Tämä ei ole positiivinen luku. Anna positiivinen luku');
+  integer = + prompt("Enter a positive number");
+  while(integer < 0){
+    integer = + prompt("The number you entered was not a negative number. Please enter a positive number");
   }
-  luku = Math.sqrt(luku);
-  document.write('Luvun neliöjuuri on = ' + luku );
+  integer = Math.sqrt(integer);
+  document.write("The square root of the entered number is = " + integer );
 
 
 </script>

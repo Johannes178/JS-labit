@@ -3,42 +3,33 @@
     <title>Luento 2</title>
 </head>
 <body>
-<h3>Laskureita maailman ääriin asti </h3>
+<h3> Play the bingo! </h3>
 
 <p>
     <br>
-    Tämä ohjelma tulostaa näytölle tekstiä
+    This program can play bingo for your entertainment. 25 bingo squares randomized. <br><br>
+    Refresh the page to roll new numbers.
     <br>
 </p>
 
 <script>
-  'use strict';
+  "use strict";
 
+  //Tehtävä 7
 
-  //Tehtävä 1
-  let luku, i;
-  luku = prompt('Anna yläraja parillisille luvuille.');
-  for (i = luku - 1; i>0 ; i--) {
-    if(i == luku -1){
-      document.write('Annetut luvut: ' + luku)
+  let integer, i = 0, a = 0, n = 1;
+  do {
+    while(i < 5) {
+      integer = + Math.random() * (4*n - (4*n-3)) + (4*n-3);
+      document.write(integer.toFixed() + ', ' );
+      n++;
+      i++;
     }
-    luku = luku * i;
-    document.write(i);
-  }
-  document.write('<br>' + 'Kertoma =' + luku);
 
-  //Tehtävä 2
-  let luku;
-
-  luku = + prompt('Anna positiivinen luku');
-  while(luku < 0){
-    luku = + prompt('Tämä ei ole positiivinen luku. Anna positiivinen luku');
-  }
-  luku = Math.sqrt(luku);
-  document.write('Luvun neliöjuuri on = ' + luku );
-
-  //Tehtävä 3
-
+    document.write('<br>');
+    i = 0;
+    a++;
+  }while(a<5);
 
 </script>
 

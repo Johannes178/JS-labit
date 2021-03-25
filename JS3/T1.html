@@ -3,29 +3,29 @@
     <title>Luento 2</title>
 </head>
 <body>
-<h3> Laskureita maailman ääriin asti </h3>
+<h3> Factorial counter program </h3>
 
 <p>
     <br>
-    Tämä ohjelma tulostaa näytölle tekstiä:
+    This program counts the factorial of the given upper limit for the numbers.
     <br>
 </p>
 
 <script>
-  'use strict';
+  "use strict";
 
 
   //Tehtävä 1
-  let luku, i;
-  luku = prompt('Anna yläraja parillisille luvuille.');
-  for (i = luku - 1; i>0 ; i--) {
-    if(i == luku -1){
-      document.write('Annetut luvut: ' + luku)
+  let integer, i;
+  integer = prompt("Enter an upper limit for the numbers");
+  for (i = integer - 1; i>0 ; i--) {
+    if(i == integer -1){
+      document.write("Entered numbers " + integer)
     }
-    luku = luku * i;
+    integer = integer * i;
     document.write(i);
   }
-  document.write('<br>' + 'Kertoma =' + luku);
+  document.write('<br>' + "Factorial = " + integer);
 
 
 </script>

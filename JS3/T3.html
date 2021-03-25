@@ -3,37 +3,39 @@
     <title>Luento 2</title>
 </head>
 <body>
-<h3>Laskureita maailman ääriin asti </h3>
+<h3> Leap year program </h3>
 
 <p>
     <br>
-    Tämä ohjelma tulostaa näytölle tekstiä
+    This program recognises leap years as you enter years that you want to identify.
     <br>
 </p>
 
+<div id="vuodet"></div>
+
 <script>
-  'use strict';
+  "use strict";
 
   //Tehtävä 3
-  let aloitus, lopetus, lista;
-  aloitus = + prompt('Anna aloitusvuosi ');
-  lopetus = + prompt('Anna lopetusvuosi');
+  let startyear, endyear, list;
+  startyear = + prompt("Enter the year you want to count from");
+  endyear = + prompt("Enter the year you want to count to");
 
-  lista = '<ul>';
+  list = '<ul>';
   do{
-    if((aloitus % 4 ==0) && (aloitus%100 !=0) || (aloitus %400 == 0)) {
-      lista += '<li>' + aloitus + '</li>';
-      aloitus +=1;
+    if((startyear % 4 ==0) && (startyear%100 !=0) || (startyear %400 == 0)) {
+      list += '<li>' + startyear + '</li>';
+      startyear +=1;
     }
 
     else{
-      aloitus +=1;
+      startyear +=1;
     }
 
-  }while(aloitus<=lopetus);
-  lista += '</ul>';
-
-  document.getElementById('moi').innerHTML = lista;
+  }while(startyear<=endyear);
+  list += '</ul>';
+  //Gives an error in the console, just type "list" in the console so you can get the actual list. Workaround done with div.
+  document.getElementById("vuodet").innerHTML = list;
 
 </script>
 
