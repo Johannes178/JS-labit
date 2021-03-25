@@ -1,0 +1,42 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <title>Luento 2</title>
+</head>
+<body>
+<h3>Laskureita maailman ääriin asti </h3>
+
+<p>
+    <br>
+    Tämä ohjelma tulostaa näytölle tekstiä
+    <br>
+</p>
+
+<script>
+  'use strict';
+
+  //Tehtävä 3
+  let aloitus, lopetus, lista;
+  aloitus = + prompt('Anna aloitusvuosi ');
+  lopetus = + prompt('Anna lopetusvuosi');
+
+  lista = '<ul>';
+  do{
+    if((aloitus % 4 ==0) && (aloitus%100 !=0) || (aloitus %400 == 0)) {
+      lista += '<li>' + aloitus + '</li>';
+      aloitus +=1;
+    }
+
+    else{
+      aloitus +=1;
+    }
+
+  }while(aloitus<=lopetus);
+  lista += '</ul>';
+
+  document.getElementById('moi').innerHTML = lista;
+
+</script>
+
+
+</body>
+</html>

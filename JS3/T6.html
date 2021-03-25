@@ -1,0 +1,47 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <title>Luento 2</title>
+</head>
+<body>
+<h3>Laskureita maailman ääriin asti </h3>
+
+<p>
+    <br>
+    Tämä ohjelma tulostaa näytölle tekstiä
+    <br>
+</p>
+
+<script>
+  'use strict';
+
+
+  //Tehtävä 1
+  let luku, i;
+  luku = prompt('Anna yläraja parillisille luvuille.');
+  for (i = luku - 1; i>0 ; i--) {
+    if(i == luku -1){
+      document.write('Annetut luvut: ' + luku)
+    }
+    luku = luku * i;
+    document.write(i);
+  }
+  document.write('<br>' + 'Kertoma =' + luku);
+
+  //Tehtävä 2
+  let luku;
+
+  luku = + prompt('Anna positiivinen luku');
+  while(luku < 0){
+    luku = + prompt('Tämä ei ole positiivinen luku. Anna positiivinen luku');
+  }
+  luku = Math.sqrt(luku);
+  document.write('Luvun neliöjuuri on = ' + luku );
+
+  //Tehtävä 3
+
+
+</script>
+
+
+</body>
+</html>
