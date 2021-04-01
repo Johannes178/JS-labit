@@ -1,0 +1,31 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <title>Week 3</title>
+</head>
+<body>
+
+
+<script>
+  "use strict";
+
+  const fibonacci = (integer) =>
+  {
+    if (integer<2) {
+      return integer;
+    }
+    else {
+
+      return fibonacci(integer-1) + fibonacci(integer-2);
+    }
+  }
+
+
+  integer= prompt('Anna fibonaccin lukujonon suurin alkio');
+  alert(fibonacci(integer));
+  console.log(fibonacci(integer));
+
+</script>
+
+
+</body>
+</html>

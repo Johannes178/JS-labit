@@ -1,0 +1,34 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <title>Week 3</title>
+</head>
+<body>
+
+
+<script>
+  "use strict";
+
+  let pair=[];
+  function paired(list){
+    for(n=0; n<list.length; n++){
+      if(list[n] % 2 ==0){
+        pair.push(list[n]);
+      }
+    }
+    return pair;
+  }
+  let list=[];
+  let integer;
+  do{
+    integer= prompt('Anna lukuja. 0 lopettaa lukujen syötön');
+    list.push(integer);
+  }while(integer!=0);
+
+  let vr=paired(list);
+  alert(vr);
+
+</script>
+
+
+</body>
+</html>

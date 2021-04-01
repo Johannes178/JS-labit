@@ -1,0 +1,34 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <title>Week 3</title>
+</head>
+<body>
+
+
+<script>
+  "use strict";
+
+  function opposite(list){
+    let opposite=[];
+
+    for(n=0; n<list.length; n++){
+      let opp = list[n];
+      opp = opp * -1;
+      opposite.push(opp);
+    }
+    console.log(opposite);
+    alert(opposite);
+    return;
+  }
+  let list = [];
+  let integer;
+  do{
+    integer = prompt("Enter integers. Stop by entering 0.");
+    list.push(integer);
+  }while(integer !=0);
+  opposite(list);
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <title>Week 3</title>
+</head>
+<body>
+
+
+<script>
+  "use strict";
+
+  function attach(list){
+    let a =list.join("");
+    return a;
+  }
+
+  let list =[], n;
+
+  do{
+    n = prompt("Enter characters. Stop by entering 0.");
+    if(n !=0) {
+      list.push(n);
+    }
+  }while(n!=0);
+
+  let i = attach(list);
+  alert(i);
+
+</script>
+
+
+</body>
+</html>

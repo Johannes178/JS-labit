@@ -1,0 +1,33 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <title>Week 3</title>
+</head>
+<body>
+
+<script>
+  "use strict";
+
+  function greatest(list){
+    list.sort(function (a, b) {return a - b;});
+    console.log(list);
+    let length = list.length;
+    console.log(length);
+    let great = list[ length-1];
+    return great;
+  }
+
+  let list =[];
+  for(i=0; i<3; i++){
+    let luku = prompt('anna luku');
+    list.push(luku);
+    console.log(list);
+  }
+  let gr8 = greatest(list);
+
+  console.log(gr8);
+
+</script>
+
+
+</body>
+</html>
